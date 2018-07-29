@@ -4,7 +4,7 @@
   "States": {
     "AplusB": {
       "Type": "Task",
-      "Resource": "arn:aws:lambda:us-west-2:845239747434:function:AplusB",
+      "Resource": "<Insert your ARN>",
       "Next": "CheckAplusB"
     },
 "CheckAplusB": {
@@ -24,7 +24,7 @@
 }	,
     "PrintResults": {
       "Type": "Task",
-      "Resource": "arn:aws:lambda:us-west-2:845239747434:function:PrintSum",
+      "Resource": "<Insert your ARN>",
       "End": true
     },
 "IncrementAB": {
@@ -37,7 +37,7 @@
            "IncrementA": {
              "Type": "Task",
              "Resource":
-               "arn:aws:lambda:us-west-2:845239747434:function:IncrementA",
+               "<Insert your ARN>",
              "End": true
            }
          }
@@ -48,7 +48,7 @@
            "IncrementB": {
              "Type": "Task",
              "Resource":
-               "arn:aws:lambda:us-west-2:845239747434:function:IncrementB",
+               "<Insert your ARN>",
              "End": true
            }
          }
@@ -57,7 +57,7 @@
     },
     "FormatInputs": {
       "Type": "Task",
-      "Resource": "arn:aws:lambda:us-west-2:845239747434:function:FormatInputs",
+      "Resource": "<Insert your ARN>",
       "Next": "wait_ten_seconds"
     },	
 "wait_ten_seconds": {
