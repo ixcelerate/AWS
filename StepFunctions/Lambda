@@ -1,0 +1,92 @@
+#Lambda Name: AplusB
+--------------------------
+
+from __future__ import print_function
+
+import json
+
+print('Loading function')
+
+
+def lambda_handler(event, context):
+    value1 = event['A']
+    value2 = event['B']
+    
+    v_SumAB = value1 + value2
+    retval = {"A":value1, "B": value2, "SumAB": v_SumAB}
+    return(retval)
+
+	
+	
+
+#Lambda Name: IncrementA
+--------------------------
+    
+from __future__ import print_function
+
+import json
+
+print('Loading function')
+
+
+def lambda_handler(event, context):
+    A = event['A']
+    
+    A = A + 1 
+    retval = {"A":A}
+    return(retval)
+	
+
+	
+	
+#Lambda Name: IncrementB
+--------------------------
+
+from __future__ import print_function
+
+import json
+
+print('Loading function')
+
+
+def lambda_handler(event, context):
+    B = event['B']
+    
+    B = B + 1 
+    retval = {"B":B}
+    return(retval)
+		
+
+		
+		
+#Lambda Name: FormatInputs
+--------------------------
+
+from __future__ import print_function
+
+import json
+
+print('Loading function')
+
+
+def lambda_handler(event, context):
+    retval = {"A": event[0]['A'] , "B": event[1]['B'] }
+    return(retval)
+			
+	
+	
+	
+
+#Lambda Name: PrintSum
+--------------------------
+from __future__ import print_function
+
+import json
+
+print('Loading function')
+
+
+def lambda_handler(event, context):
+    print("Sum of A and B is {}".format(event['SumAB']))
+    return(event)
+	
